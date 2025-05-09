@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .center-text {
+        text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        table, th, td {
+            border:1px solid black;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+<!--            border-collapse: collapse;  -->
+        }
+        th, td {
+            padding: 6px;
+        body {
+            width : 355mm;
+            height : 215mm;
+        {
+    </style>
+    
+<title>NFL Pools</title>
+
+
+</head>
+
+<body>
+    <form method="post">
+    <h1>NFL Pools</h1> 
+    <h2 id="weekTitle_olgNumberTitle"></h2>
+    
+    <table>
+        <tr>
+            <th> Game_#</th>
+            <th> Visitor</th>
+            <th>  </th>
+            <th> Home </th>
+            <th>Favourite</th>
+            <th >Pointspread</th>
+            <th>Upset_Class</th>
+            <th>Line_1</th>
+            <th>Line_2</th>
+            <th >Line_3</th>
+            <th>Line_4</th>
+            <th>Line_5</th>
+            <th>Line_6</th>
+            <th>Line_7</th>
+            <th>Line_8</th>
+            <th>Line_9</th>
+            <th>Line_10</th>
+            <th>Line_11</th>
+            <th>Line_12</th>
+            <th>Line_13</th>
+            <th>Line_14</th>
+            <th>Line_15</th>
+            <th>Line_16</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Almos_1</td>
+            <td>Andor_1</td>
+            <td>Bill_1</td>
+            <td>Carl_1</td>
+            <td>Grant_1</td>
+            <td>Mark_1</td>
+            <td>Randy_1</td>
+            <td>Ryan_1</td>
+            <td>Almos_2</td>
+            <td>Andor_2</td>
+            <td>Bill_2</td>
+            <td>Carl_2</td>
+            <td>Grant_2</td>
+            <td>Mark_2</td>
+            <td>Randy_2</td>
+            <td>Ryan_2</td>
+        </tr>
+            <td></td>
+        <tr>
+            <td>1</td>
+            <td id="v1"></td>
+            <td>vs</td>
+            <td id="h1"></td>
+            <td id="f1"></td>
+            <td id="p1"></td>
+            <td id="ut1"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm1',1,1,'almos1save')" id="listboxalmos1gm1">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm1',2,1,'andor1save')" id='listboxandor1gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm1',3,1,'bill1save')" id='listboxbill1gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm1',4,1,'carl1save')" id='listboxcarl1gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm1',5,1,'grant1save')" id='listboxgrant1gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm1',6,1,'mark1save')" id='listboxmark1gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm1',7,1,'randy1save')" id='listboxrandy1gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm1',8,1,'ryan1save')" id='listboxryan1gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm1',9,1,'almos2save')" id="listboxalmos2gm1">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm1',10,1,'andor2save')" id='listboxandor2gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm1',11,1,'bill2save')" id='listboxbill2gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm1',12,1,'carl2save')" id='listboxcarl2gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm1',13,1,'grant2save')" id='listboxgrant2gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm1',14,1,'mark2save')" id='listboxmark2gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm1',15,1,'randy2save')" id='listboxrandy2gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm1',16,1,'ryan2save')" id='listboxryan2gm1'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="v2"></td>
+            <td>vs</td>
+            <td id="h2"></td>
+            <td id="f2"></td>
+            <td id="p2"></td>
+            <td id="ut2"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm2',1,2,'almos1save')" id='listboxalmos1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm2',2,2,'andor1save')" id='listboxandor1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm2',3,2,'bill1save')" id='listboxbill1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm2',4,2,'carl1save')" id='listboxcarl1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm2',5,2,'grant1save')" id='listboxgrant1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm2',6,2,'mark1save')" id='listboxmark1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm2',7,2,'randy1save')" id='listboxrandy1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm2',8,2,'ryan1save')" id='listboxryan1gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm2',9,2,'almos2save')" id="listboxalmos2gm2">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm2',10,2,'andor2save')" id='listboxandor2gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm2',11,2,'bill2save')" id='listboxbill2gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm2',12,2,'carl2save')" id='listboxcarl2gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm2',13,2,'grant2save')" id='listboxgrant2gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm2',14,2,'mark2save')" id='listboxmark2gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm2',15,2,'randy2save')" id='listboxrandy2gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm2',16,2,'ryan2save')" id='listboxryan2gm2'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="v3"></td>
+            <td>vs</td>
+            <td id="h3"></td>
+            <td id="f3"></td>
+            <td id="p3"></td>
+            <td id="ut3"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm3',1,3,'almos1save')" id='listboxalmos1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm3',2,3,'andor1save')" id='listboxandor1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm3',3,3,'bill1save')" id='listboxbill1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm3',4,3,'carl1save')" id='listboxcarl1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm3',5,3,'grant1save')" id='listboxgrant1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm3',6,3,'mark1save')" id='listboxmark1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm3',7,3,'randy1save')" id='listboxrandy1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm3',8,3,'ryan1save')" id='listboxryan1gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm3',9,3,'almos2save')" id="listboxalmos2gm3">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm3',10,3,'andor2save')" id='listboxandor2gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm3',11,3,'bill2save')" id='listboxbill2gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm3',12,3,'carl2save')" id='listboxcarl2gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm3',13,3,'grant2save')" id='listboxgrant2gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm3',14,3,'mark2save')" id='listboxmark2gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm3',15,3,'randy2save')" id='listboxrandy2gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm3',16,3,'ryan2save')" id='listboxryan2gm3'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="v4"></td>
+            <td>vs</td>
+            <td id="h4"></td>
+            <td id="f4"></td>
+            <td id="p4"></td>
+            <td id="ut4"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm4',1,4,'almos1save')" id='listboxalmos1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm4',2,4,'andor1save')" id='listboxandor1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm4',3,4,'bill1save')" id='listboxbill1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm4',4,4,'carl1save')" id='listboxcarl1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm4',5,4,'grant1save')" id='listboxgrant1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm4',6,4,'mark1save')" id='listboxmark1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm4',7,4,'randy1save')" id='listboxrandy1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm4',8,4,'ryan1save')" id='listboxryan1gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm4',9,4,'almos2save')" id="listboxalmos2gm4">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm4',10,4,'andor2save')" id='listboxandor2gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm4',11,4,'bill2save')" id='listboxbill2gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm4',12,4,'carl2save')" id='listboxcarl2gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm4',13,4,'grant2save')" id='listboxgrant2gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm4',14,4,'mark2save')" id='listboxmark2gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm4',15,4,'randy2save')" id='listboxrandy2gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm4',16,4,'ryan2save')" id='listboxryan2gm4'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="v5"></td>
+            <td>vs</td>
+            <td id="h5"></td>
+            <td id="f5"></td>
+            <td id="p5"></td>
+            <td id="ut5"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm5',1,5,'almos1save')" id='listboxalmos1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm5',2,5,'andor1save')" id='listboxandor1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm5',3,5,'bill1save')" id='listboxbill1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm5',4,5,'carl1save')" id='listboxcarl1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm5',5,5,'grant1save')" id='listboxgrant1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm5',6,5,'mark1save')" id='listboxmark1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm5',7,5,'randy1save')" id='listboxrandy1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm5',8,5,'ryan1save')" id='listboxryan1gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm5',9,5,'almos2save')" id="listboxalmos2gm5">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm5',10,5,'andor2save')" id='listboxandor2gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm5',11,5,'bill2save')" id='listboxbill2gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm5',12,5,'carl2save')" id='listboxcarl2gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm5',13,5,'grant2save')" id='listboxgrant2gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm5',14,5,'mark2save')" id='listboxmark2gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm5',15,5,'randy2save')" id='listboxrandy2gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm5',16,5,'ryan2save')" id='listboxryan2gm5'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="v6"></td>
+            <td>vs</td>
+            <td id="h6"></td>
+            <td id="f6"></td>
+            <td id="p6"></td>
+            <td id="ut6"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm6',1,6,'almos1save')" id='listboxalmos1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm6',2,6,'andor1save')" id='listboxandor1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm6',3,6,'bill1save')" id='listboxbill1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm6',4,6,'carl1save')" id='listboxcarl1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm6',5,6,'grant1save')" id='listboxgrant1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm6',6,6,'mark1save')" id='listboxmark1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm6',7,6,'randy1save')" id='listboxrandy1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm6',8,6,'ryan1save')" id='listboxryan1gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm6',9,6,'almos2save')" id="listboxalmos2gm6">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm6',10,6,'andor2save')" id='listboxandor2gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm6',11,6,'bill2save')" id='listboxbill2gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm6',12,6,'carl2save')" id='listboxcarl2gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm6',13,6,'grant2save')" id='listboxgrant2gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm6',14,6,'mark2save')" id='listboxmark2gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm6',15,6,'randy2save')" id='listboxrandy2gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm6',16,6,'ryan2save')" id='listboxryan2gm6'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="v7"></td>
+            <td>vs</td>
+            <td id="h7"></td>
+            <td id="f7"></td>
+            <td id="p7"></td>
+            <td id="ut7"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm7',1,7,'almos1save')" id='listboxalmos1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm7',2,7,'andor1save')" id='listboxandor1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm7',3,7,'bill1save')" id='listboxbill1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm7',4,7,'carl1save')" id='listboxcarl1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm7',5,7,'grant1save')" id='listboxgrant1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm7',6,7,'mark1save')" id='listboxmark1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm7',7,7,'randy1save')" id='listboxrandy1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm7',8,7,'ryan1save')" id='listboxryan1gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm7',9,7,'almos2save')" id="listboxalmos2gm7">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm7',10,7,'andor2save')" id='listboxandor2gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm7',11,7,'bill2save')" id='listboxbill2gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm7',12,7,'carl2save')" id='listboxcarl2gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm7',13,7,'grant2save')" id='listboxgrant2gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm7',14,7,'mark2save')" id='listboxmark2gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm7',15,7,'randy2save')" id='listboxrandy2gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm7',16,7,'ryan2save')" id='listboxryan2gm7'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="v8"></td>
+            <td>vs</td>
+            <td id="h8"></td>
+            <td id="f8"></td>
+            <td id="p8"></td>
+            <td id="ut8"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm8',1,8,'almos1save')" id='listboxalmos1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm8',2,8,'andor1save')" id='listboxandor1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm8',3,8,'bill1save')" id='listboxbill1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm8',4,8,'carl1save')" id='listboxcarl1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm8',5,8,'grant1save')" id='listboxgrant1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm8',6,8,'mark1save')" id='listboxmark1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm8',7,8,'randy1save')" id='listboxrandy1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm8',8,8,'ryan1save')" id='listboxryan1gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm8',9,8,'almos2save')" id="listboxalmos2gm8">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm8',10,8,'andor2save')" id='listboxandor2gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm8',11,8,'bill2save')" id='listboxbill2gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm8',12,8,'carl2save')" id='listboxcarl2gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm8',13,8,'grant2save')" id='listboxgrant2gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm8',14,8,'mark2save')" id='listboxmark2gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm8',15,8,'randy2save')" id='listboxrandy2gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm8',16,8,'ryan2save')" id='listboxryan2gm8'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="v9"></td>
+            <td>vs</td>
+            <td id="h9"></td>
+            <td id="f9"></td>
+            <td id="p9"></td>
+            <td id="ut9"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm9',1,9,'almos1save')" id='listboxalmos1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm9',2,9,'andor1save')" id='listboxandor1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm9',3,9,'bill1save')" id='listboxbill1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm9',4,9,'carl1save')" id='listboxcarl1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm9',5,9,'grant1save')" id='listboxgrant1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm9',6,9,'mark1save')" id='listboxmark1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm9',7,9,'randy1save')" id='listboxrandy1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm9',8,9,'ryan1save')" id='listboxryan1gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm9',9,9,'almos2save')" id="listboxalmos2gm9">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm9',10,9,'andor2save')" id='listboxandor2gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm9',11,9,'bill2save')" id='listboxbill2gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm9',12,9,'carl2save')" id='listboxcarl2gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm9',13,9,'grant2save')" id='listboxgrant2gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm9',14,9,'mark2save')" id='listboxmark2gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm9',15,9,'randy2save')" id='listboxrandy2gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm9',16,9,'ryan2save')" id='listboxryan2gm9'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="v10"></td>
+            <td>vs</td>
+            <td id="h10"></td>
+            <td id="f10"></td>
+            <td id="p10"></td>
+            <td id="ut10"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm10',1,10,'almos1save')" id='listboxalmos1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm10',2,10,'andor1save')" id='listboxandor1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm10',3,10,'bill1save')" id='listboxbill1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm10',4,10,'carl1save')" id='listboxcarl1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm10',5,10,'grant1save')" id='listboxgrant1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm10',6,10,'mark1save')" id='listboxmark1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm10',7,10,'randy1save')" id='listboxrandy1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm10',8,10,'ryan1save')" id='listboxryan1gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm10',9,10,'almos2save')" id="listboxalmos2gm10">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm10',10,10,'andor2save')" id='listboxandor2gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm10',11,10,'bill2save')" id='listboxbill2gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm10',12,10,'carl2save')" id='listboxcarl2gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm10',13,10,'grant2save')" id='listboxgrant2gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm10',14,10,'mark2save')" id='listboxmark2gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm10',15,10,'randy2save')" id='listboxrandy2gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm10',16,10,'ryan2save')" id='listboxryan2gm10'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td id="v11"></td>
+            <td>vs</td>
+            <td id="h11"></td>
+            <td id="f11"></td>
+            <td id="p11"></td>
+            <td id="ut11"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm11',1,11,'almos1save')" id='listboxalmos1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm11',2,11,'andor1save')" id='listboxandor1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm11',3,11,'bill1save')" id='listboxbill1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm11',4,11,'carl1save')" id='listboxcarl1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm11',5,11,'grant1save')" id='listboxgrant1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm11',6,11,'mark1save')" id='listboxmark1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm11',7,11,'randy1save')" id='listboxrandy1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm11',8,11,'ryan1save')" id='listboxryan1gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm11',9,11,'almos2save')" id="listboxalmos2gm11">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm11',10,11,'andor2save')" id='listboxandor2gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm11',11,11,'bill2save')" id='listboxbill2gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm11',12,11,'carl2save')" id='listboxcarl2gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm11',13,11,'grant2save')" id='listboxgrant2gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm11',14,11,'mark2save')" id='listboxmark2gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm11',15,11,'randy2save')" id='listboxrandy2gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm11',16,11,'ryan2save')" id='listboxryan2gm11'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td id="v12"></td>
+            <td>vs</td>
+            <td id="h12"></td>
+            <td id="f12"></td>
+            <td id="p12"></td>
+            <td id="ut12"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm12',1,12,'almos1save')" id='listboxalmos1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm12',2,12,'andor1save')" id='listboxandor1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm12',3,12,'bill1save')" id='listboxbill1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm12',4,12,'carl1save')" id='listboxcarl1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm12',5,12,'grant1save')" id='listboxgrant1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm12',6,12,'mark1save')" id='listboxmark1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm12',7,12,'randy1save')" id='listboxrandy1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm12',8,12,'ryan1save')" id='listboxryan1gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm12',9,12,'almos2save')" id="listboxalmos2gm12">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm12',10,12,'andor2save')" id='listboxandor2gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm12',11,12,'bill2save')" id='listboxbill2gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm12',12,12,'carl2save')" id='listboxcarl2gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm12',13,12,'grant2save')" id='listboxgrant2gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm12',14,12,'mark2save')" id='listboxmark2gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm12',15,12,'randy2save')" id='listboxrandy2gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm12',16,12,'ryan2save')" id='listboxryan2gm12'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td id="v13"></td>
+            <td>vs</td>
+            <td id="h13"></td>
+            <td id="f13"></td>
+            <td id="p13"></td>
+            <td id="ut13"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm13',1,13,'almos1save')" id='listboxalmos1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm13',2,13,'andor1save')" id='listboxandor1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm13',3,13,'bill1save')" id='listboxbill1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm13',4,13,'carl1save')" id='listboxcarl1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm13',5,13,'grant1save')" id='listboxgrant1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm13',6,13,'mark1save')" id='listboxmark1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm13',7,13,'randy1save')" id='listboxrandy1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm13',8,13,'ryan1save')" id='listboxryan1gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm13',9,13,'almos2save')" id="listboxalmos2gm13">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm13',10,13,'andor2save')" id='listboxandor2gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm13',11,13,'bill2save')" id='listboxbill2gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm13',12,13,'carl2save')" id='listboxcarl2gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm13',13,13,'grant2save')" id='listboxgrant2gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm13',14,13,'mark2save')" id='listboxmark2gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm13',15,13,'randy2save')" id='listboxrandy2gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm13',16,13,'ryan2save')" id='listboxryan2gm13'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td id="v14"></td>
+            <td>vs</td>
+            <td id="h14"></td>
+            <td id="f14"></td>
+            <td id="p14"></td>
+            <td id="ut14"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm14',1,14,'almos1save')" id='listboxalmos1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm14',2,14,'andor1save')" id='listboxandor1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm14',3,14,'bill1save')" id='listboxbill1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm14',4,14,'carl1save')" id='listboxcarl1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm14',5,14,'grant1save')" id='listboxgrant1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm14',6,14,'mark1save')" id='listboxmark1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm14',7,14,'randy1save')" id='listboxrandy1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm14',8,14,'ryan1save')" id='listboxryan1gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm14',9,14,'almos2save')" id="listboxalmos2gm14">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm14',10,14,'andor2save')" id='listboxandor2gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm14',11,14,'bill2save')" id='listboxbill2gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm14',12,14,'carl2save')" id='listboxcarl2gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm14',13,14,'grant2save')" id='listboxgrant2gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm14',14,14,'mark2save')" id='listboxmark2gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm14',15,14,'randy2save')" id='listboxrandy2gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm14',16,14,'ryan2save')" id='listboxryan2gm14'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+            <td>15</td>
+            <td id="v15"></td>
+            <td>vs</td>
+            <td id="h15"></td>
+            <td id="f15"></td>
+            <td id="p15"></td>
+            <td id="ut15"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm15',1,15,'almos1save')" id='listboxalmos1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm15',2,15,'andor1save')" id='listboxandor1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm15',3,15,'bill1save')" id='listboxbill1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm15',4,15,'carl1save')" id='listboxcarl1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm15',5,15,'grant1save')" id='listboxgrant1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm15',6,15,'mark1save')" id='listboxmark1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm15',7,15,'randy1save')" id='listboxrandy1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm15',8,15,'ryan1save')" id='listboxryan1gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm15',9,15,'almos2save')" id="listboxalmos2gm15">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm15',10,15,'andor2save')" id='listboxandor2gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm15',11,15,'bill2save')" id='listboxbill2gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm15',12,15,'carl2save')" id='listboxcarl2gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm15',13,15,'grant2save')" id='listboxgrant2gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm15',14,15,'mark2save')" id='listboxmark2gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm15',15,15,'randy2save')" id='listboxrandy2gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm15',16,15,'ryan2save')" id='listboxryan2gm15'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        <tr>
+            <td>16</td>
+            <td id="v16"></td>
+            <td>vs</td>
+            <td id="h16"></td>
+            <td id="f16"></td>
+            <td id="p16"></td>
+            <td id="ut16"></td>
+            <td>
+                <select onchange="getOption('#listboxalmos1gm16',1,16,'almos1save')" id='listboxalmos1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor1gm16',2,16,'andor1save')" id='listboxandor1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill1gm16',3,16,'bill1save')" id='listboxbill1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl1gm16',4,16,'carl1save')" id='listboxcarl1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant1gm16',5,16,'grant1save')" id='listboxgrant1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark1gm16',6,16,'mark1save')" id='listboxmark1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy1gm16',7,16,'randy1save')" id='listboxrandy1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan1gm16',8,16,'ryan1save')" id='listboxryan1gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxalmos2gm16',9,16,'almos2save')" id="listboxalmos2gm16">
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxandor2gm16',10,16,'andor2save')" id='listboxandor2gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxbill2gm16',11,16,'bill2save')" id='listboxbill2gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxcarl2gm16',12,16,'carl2save')" id='listboxcarl2gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxgrant2gm16',13,16,'grant2save')" id='listboxgrant2gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxmark2gm16',14,16,'mark2save')" id='listboxmark2gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxrandy2gm16',15,16,'randy2save')" id='listboxrandy2gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+            <td>
+                <select onchange="getOption('#listboxryan2gm16',16,16,'ryan2save')" id='listboxryan2gm16'>
+                    <!-- Options will be added here -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button id="almos1save" type="button" disabled onclick="lineComplete('almos1save','listboxalmos1')">Save Almos1</button>
+            </td>
+            <td>
+                <button id="andor1save" type="button" disabled onclick="lineComplete('andor1save','listboxandor1')">Save Andor1</button> 
+            </td>
+            <td>
+                <button id="bill1save" type="button" disabled onclick="lineComplete('bill1save','listboxbill1')">Save Bill1</button>
+            </td>
+            <td>
+                <button id="carl1save" type="button" disabled onclick="lineComplete('carl1save','listboxcarl1')">Save Carl1</button>
+            </td>
+            <td>
+                <button id="grant1save" type="button" disabled onclick="lineComplete('grant1save','listboxgrant1')">Save Grant1</button>
+            </td>
+            <td>
+                <button id="mark1save" type="button" disabled onclick="lineComplete('mark1save','listboxmark1')">Save Mark1</button>
+            </td>
+            <td>
+                <button id="randy1save" type="button" disabled onclick="lineComplete('randy1save','listboxrandy1')">Save Randy1</button>
+            </td>
+            <td>
+                <button id="ryan1save" type="button" disabled onclick="lineComplete('ryan1save','listboxryan1')">Save Ryan1</button>
+            </td>
+            <td>
+                <button id="almos2save" type="button" disabled onclick="lineComplete('almos2save','listboxalmos2')">Save Almos2</button>
+            </td>
+            <td>
+                <button id="andor2save" type="button" disabled onclick="lineComplete('andor2save','listboxandor2')">Save Andor2</button> 
+            </td>
+            <td>
+                <button id="bill2save" type="button" disabled onclick="lineComplete('bill2save','listboxbill2')">Save Bill2</button>
+            </td>
+            <td>
+                <button id="carl2save" type="button" disabled onclick="lineComplete('carl2save','listboxcarl2')">Save Carl2</button>
+            </td>
+            <td>
+                <button id="grant2save" type="button" disabled onclick="lineComplete('grant2save','listboxgrant2')">Save Grant2</button>
+            </td>
+            <td>
+                <button id="mark2save" type="button" disabled onclick="lineComplete('mark2save','listboxmark2')">Save Mark2</button>
+            </td>
+            <td>
+                <button id="randy2save" type="button" disabled onclick="lineComplete('randy2save','listboxrandy2')">Save Randy2</button>
+            </td>
+            <td>
+                <button id="ryan2save" type="button" disabled onclick="lineComplete('ryan2save','listboxryan2')">Save Ryan2</button>
+            </td>
+        </tr>
+    </table>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+//    <script type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        
+        function upset_classes(ps){
+            if(ps >= -3.0) {
+                upset_class = "Small"
+            } else if(ps < -3.0 && ps > -7.0) {
+                upset_class = "Medium"
+            } else {
+                upset_class = "Large"
+            }
+        return upset_class;
+        }
+        function listboxes(listboxid,array_num){
+// Create game pick list with blank, visitorm, and home selection options
+            let firstOption = "";
+            let secondOption = visitor_array[array_num];
+            let thirdOption = home_array[array_num];
+// Get the listbox element
+            const listbox = document.getElementById(listboxid);
+// Create first option element
+            let option1 = document.createElement('option');
+            let option2 = document.createElement('option');
+            let option3 = document.createElement('option');
+// Set the value and text of the option
+            option1.value = firstOption;
+            option1.text = firstOption;
+            listbox.appendChild(option1);
+            option2.value = secondOption;
+            option2.text = secondOption;
+            listbox.appendChild(option2); 
+            option3.value = thirdOption;
+            option3.text = thirdOption;
+            listbox.appendChild(option3);
+        return listbox;
+        }
+        
+        function getOption(boxid,user,game,save_button) {
+            selectElement = document.querySelector(boxid);
+            output = selectElement.options[selectElement.selectedIndex].value;
+            users_array[user][week][game] = output;
+            document.getElementById(save_button).disabled = true;
+            if ((users_array[user][week].length == no_games + 1) && (!users_array[user][week].includes(''))) {
+                   document.getElementById(save_button).disabled = false;
+            }
+            console.log(output);
+            console.log(users_array);
+        return output;
+        return users_array;
+        }
+        
+        function lineComplete(buttonid,listbox) {
+            document.getElementById(buttonid).disabled = true;
+//            saveAsPDF();
+            createPdf();
+//            sendemail();
+//            output_file = 'nfl_pools_users_array';
+//            write_array(users_array,output_file);
+            for (let i = 1; i <= no_games; i++) {
+                var listboxName = "";
+                listboxName = listbox + "gm" + i.toString();
+//                console.log(listboxName);
+                document.getElementById(listboxName).disabled = true;
+                document.getElementById(listboxName).backgroundColor = 'white';
+                document.getElementById(listboxName).color = 'black';
+            }
+
+        }
+        function createPdf() {
+            const options = {
+                margin:[0,0],
+                html2canvas:  { scale: 3, height: 950, width: 1700 },
+                filename: weekly_file,
+                jsPDF: { unit: 'in', format: 'legal', orientation: 'landscape' }
+            }
+            html2pdf().from(document.body).set(options).toPdf().save();
+//            window.print(); save() output(path_file, 'f')  letterRendering: true,
+            
+        }
+        async function saveAsPDF() {
+
+            const { jsPDF } = window.jspdf;
+            const content = document.body;
+            
+            // Capture the content as a canvas
+            const canvas = await html2canvas(content);
+            const imgData = canvas.toDataURL('image/png');
+            
+            // Create a new PDF document
+            const pdf = new jsPDF();
+            pdf.addImage(imgData, 'PNG', 0, 0);
+             
+            
+            // Save the PDF
+            pdf.save(weekly_file);
+        }
+        function sendemail() {
+            Email_Title = "NFL Pools - Week - " + week.toString() + " - Updated Picks";
+            Email.send({
+                Host: "smtp.mail.yahoo.com",
+                Username: "meirosella@yahoo.com",
+                Password: "Blz1peaches",
+//                Port: 465,
+                To: 'amei@shaw.ca',
+                From: "meirosella@yahoo.com",
+                Subject: Email_Title,
+                Body: "This is a test email.",
+                Attachments: [
+                    {
+                        filename: weekly_file,
+                        path: file_path,
+                    }]
+            })
+                .then(function (message) {
+                    alert("Mail sent successfully");
+                });
+        }
+        function write_array(array,output_file) {
+            try {
+                const data = new Blob([JSON.stringify(array)], { type: 'application/json' });
+                saveAs(data, output_file);
+            }   catch (error) {
+                console.error('An error occurred while saving the file:', error);
+// Add user-friendly error handling here (e.g., display an alert to the user).
+}    
+        }
+        var week = 1;
+        var poolsNumber = 25;
+        var visitor_array = ["BUF","CAR","CHI","HOU","JAK","NO","NYG","WSH","KC","LAC","MIA","SF","SEA","MIN"];
+        var home_array = ["NE","ATL","GB","TEN","IND","TB","PHI","DAL","DEN","LV","NYJ","ARZ","LAR","DET"];
+        var favourite_array = ["BUF","ATL","GB","TEN","IND","TB","PHI","WSH","DEN","LAC","MIA","ARZ","SEA","DET"];
+        var pointspread_array = ["-2.5","-8.5","-8.5","-1.5","-4.5","-13.5","-3.5","-4.5","-10.5","-3.5","-1.5","-3.5","-3.5","-2.5"];
+        var weekTitle = "Week - " + week;
+        var olgNumberTitle = "OLG Pools No - " + poolsNumber;
+        var weekTitle_olgNumberTitle = weekTitle + "          " + olgNumberTitle;
+        var weekly_file = "NFL_Pools_week_" + week.toString() + ".pdf";
+        var file_path = 'C:/Users/amei/Downloads/';
+        var path_file = file_path + weekly_file;
+        var upset_type_array = [];
+        var no_games = visitor_array.length;
+        var users_array = [[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
+                          [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]];        
+        document.getElementById("weekTitle_olgNumberTitle").innerText = weekTitle_olgNumberTitle;
+        document.getElementById("v1").innerText = visitor_array[0];
+        document.getElementById("h1").innerText = home_array[0];
+        document.getElementById("f1").innerText = favourite_array[0];
+        document.getElementById("p1").innerText = pointspread_array[0];
+// Use upset_classes function to determine Upset Class (small, med, lg)
+        let ps1 = parseFloat(pointspread_array[0]);
+        upset_classes(ps1);
+        document.getElementById("ut1").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm1',0);
+        listboxes('listboxandor1gm1',0);
+        listboxes('listboxbill1gm1',0);
+        listboxes('listboxcarl1gm1',0);
+        listboxes('listboxgrant1gm1',0);
+        listboxes('listboxmark1gm1',0);
+        listboxes('listboxrandy1gm1',0);
+        listboxes('listboxryan1gm1',0);
+        listboxes('listboxalmos2gm1',0);
+        listboxes('listboxandor2gm1',0);
+        listboxes('listboxbill2gm1',0);
+        listboxes('listboxcarl2gm1',0);
+        listboxes('listboxgrant2gm1',0);
+        listboxes('listboxmark2gm1',0);
+        listboxes('listboxrandy2gm1',0);
+        listboxes('listboxryan2gm1',0);
+        
+        document.getElementById("v2").innerText = visitor_array[1];
+        document.getElementById("h2").innerText = home_array[1];
+        document.getElementById("f2").innerText = favourite_array[1];
+        document.getElementById("p2").innerText = pointspread_array[1];
+        let ps2 = parseFloat(pointspread_array[1]);
+        upset_classes(ps2);
+        document.getElementById("ut2").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm2',1);
+        listboxes('listboxandor1gm2',1);
+        listboxes('listboxbill1gm2',1);
+        listboxes('listboxcarl1gm2',1);
+        listboxes('listboxgrant1gm2',1);
+        listboxes('listboxmark1gm2',1);
+        listboxes('listboxrandy1gm2',1);
+        listboxes('listboxryan1gm2',1);
+        listboxes('listboxalmos2gm2',1);
+        listboxes('listboxandor2gm2',1);
+        listboxes('listboxbill2gm2',1);
+        listboxes('listboxcarl2gm2',1);
+        listboxes('listboxgrant2gm2',1);
+        listboxes('listboxmark2gm2',1);
+        listboxes('listboxrandy2gm2',1);
+        listboxes('listboxryan2gm2',1);
+        
+        document.getElementById("v3").innerText = visitor_array[2];
+        document.getElementById("h3").innerText = home_array[2];
+        document.getElementById("f3").innerText = favourite_array[2];
+        document.getElementById("p3").innerText = pointspread_array[2];
+        let ps3 = parseFloat(pointspread_array[2]);
+        upset_classes(ps3);
+        document.getElementById("ut3").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm3',2);
+        listboxes('listboxandor1gm3',2);
+        listboxes('listboxbill1gm3',2);
+        listboxes('listboxcarl1gm3',2);
+        listboxes('listboxgrant1gm3',2);
+        listboxes('listboxmark1gm3',2);
+        listboxes('listboxrandy1gm3',2);
+        listboxes('listboxryan1gm3',2);
+        listboxes('listboxalmos2gm3',2);
+        listboxes('listboxandor2gm3',2);
+        listboxes('listboxbill2gm3',2);
+        listboxes('listboxcarl2gm3',2);
+        listboxes('listboxgrant2gm3',2);
+        listboxes('listboxmark2gm3',2);
+        listboxes('listboxrandy2gm3',2);
+        listboxes('listboxryan2gm3',2);
+        
+        document.getElementById("v4").innerText = visitor_array[3];
+        document.getElementById("h4").innerText = home_array[3];
+        document.getElementById("f4").innerText = favourite_array[3];
+        document.getElementById("p4").innerText = pointspread_array[3];
+        let ps4 = parseFloat(pointspread_array[3]);
+        upset_classes(ps4);
+        document.getElementById("ut4").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm4',3);
+        listboxes('listboxandor1gm4',3);
+        listboxes('listboxbill1gm4',3);
+        listboxes('listboxcarl1gm4',3);
+        listboxes('listboxgrant1gm4',3);
+        listboxes('listboxmark1gm4',3);
+        listboxes('listboxrandy1gm4',3);
+        listboxes('listboxryan1gm4',3);
+        listboxes('listboxalmos2gm4',3);
+        listboxes('listboxandor2gm4',3);
+        listboxes('listboxbill2gm4',3);
+        listboxes('listboxcarl2gm4',3);
+        listboxes('listboxgrant2gm4',3);
+        listboxes('listboxmark2gm4',3);
+        listboxes('listboxrandy2gm4',3);
+        listboxes('listboxryan2gm4',3);
+        
+        document.getElementById("v5").innerText = visitor_array[4];
+        document.getElementById("h5").innerText = home_array[4];
+        document.getElementById("f5").innerText = favourite_array[4];
+        document.getElementById("p5").innerText = pointspread_array[4];
+        let ps5 = parseFloat(pointspread_array[4]);
+        upset_classes(ps5);
+        document.getElementById("ut5").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm5',4);
+        listboxes('listboxandor1gm5',4);
+        listboxes('listboxbill1gm5',4);
+        listboxes('listboxcarl1gm5',4);
+        listboxes('listboxgrant1gm5',4);
+        listboxes('listboxmark1gm5',4);
+        listboxes('listboxrandy1gm5',4);
+        listboxes('listboxryan1gm5',4);
+        listboxes('listboxalmos2gm5',4);
+        listboxes('listboxandor2gm5',4);
+        listboxes('listboxbill2gm5',4);
+        listboxes('listboxcarl2gm5',4);
+        listboxes('listboxgrant2gm5',4);
+        listboxes('listboxmark2gm5',4);
+        listboxes('listboxrandy2gm5',4);
+        listboxes('listboxryan2gm5',4);
+        
+        document.getElementById("v6").innerText = visitor_array[5];
+        document.getElementById("h6").innerText = home_array[5];
+        document.getElementById("f6").innerText = favourite_array[5];
+        document.getElementById("p6").innerText = pointspread_array[5];
+        let ps6 = parseFloat(pointspread_array[5]);
+        upset_classes(ps6);
+        document.getElementById("ut6").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm6',5);
+        listboxes('listboxandor1gm6',5);
+        listboxes('listboxbill1gm6',5);
+        listboxes('listboxcarl1gm6',5);
+        listboxes('listboxgrant1gm6',5);
+        listboxes('listboxmark1gm6',5);
+        listboxes('listboxrandy1gm6',5);
+        listboxes('listboxryan1gm6',5);
+        listboxes('listboxalmos2gm6',5);
+        listboxes('listboxandor2gm6',5);
+        listboxes('listboxbill2gm6',5);
+        listboxes('listboxcarl2gm6',5);
+        listboxes('listboxgrant2gm6',5);
+        listboxes('listboxmark2gm6',5);
+        listboxes('listboxrandy2gm6',5);
+        listboxes('listboxryan2gm6',5);
+        
+        document.getElementById("v7").innerText = visitor_array[6];
+        document.getElementById("h7").innerText = home_array[6];
+        document.getElementById("f7").innerText = favourite_array[6];
+        document.getElementById("p7").innerText = pointspread_array[6];
+        let ps7 = parseFloat(pointspread_array[6]);
+        upset_classes(ps7);
+        document.getElementById("ut7").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm7',6);
+        listboxes('listboxandor1gm7',6);
+        listboxes('listboxbill1gm7',6);
+        listboxes('listboxcarl1gm7',6);
+        listboxes('listboxgrant1gm7',6);
+        listboxes('listboxmark1gm7',6);
+        listboxes('listboxrandy1gm7',6);
+        listboxes('listboxryan1gm7',6);
+        listboxes('listboxalmos2gm7',6);
+        listboxes('listboxandor2gm7',6);
+        listboxes('listboxbill2gm7',6);
+        listboxes('listboxcarl2gm7',6);
+        listboxes('listboxgrant2gm7',6);
+        listboxes('listboxmark2gm7',6);
+        listboxes('listboxrandy2gm7',6);
+        listboxes('listboxryan2gm7',6);
+        
+        document.getElementById("v8").innerText = visitor_array[7];
+        document.getElementById("h8").innerText = home_array[7];
+        document.getElementById("f8").innerText = favourite_array[7];
+        document.getElementById("p8").innerText = pointspread_array[7];
+        let ps8 = parseFloat(pointspread_array[7]);
+        upset_classes(ps8);
+        document.getElementById("ut8").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm8',7);
+        listboxes('listboxandor1gm8',7);
+        listboxes('listboxbill1gm8',7);
+        listboxes('listboxcarl1gm8',7);
+        listboxes('listboxgrant1gm8',7);
+        listboxes('listboxmark1gm8',7);
+        listboxes('listboxrandy1gm8',7);
+        listboxes('listboxryan1gm8',7);
+        listboxes('listboxalmos2gm8',7);
+        listboxes('listboxandor2gm8',7);
+        listboxes('listboxbill2gm8',7);
+        listboxes('listboxcarl2gm8',7);
+        listboxes('listboxgrant2gm8',7);
+        listboxes('listboxmark2gm8',7);
+        listboxes('listboxrandy2gm8',7);
+        listboxes('listboxryan2gm8',7);
+        
+        document.getElementById("v9").innerText = visitor_array[8];
+        document.getElementById("h9").innerText = home_array[8];
+        document.getElementById("f9").innerText = favourite_array[8];
+        document.getElementById("p9").innerText = pointspread_array[8];
+        let ps9 = parseFloat(pointspread_array[8]);
+        upset_classes(ps9);
+        document.getElementById("ut9").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm9',8);
+        listboxes('listboxandor1gm9',8);
+        listboxes('listboxbill1gm9',8);
+        listboxes('listboxcarl1gm9',8);
+        listboxes('listboxgrant1gm9',8);
+        listboxes('listboxmark1gm9',8);
+        listboxes('listboxrandy1gm9',8);
+        listboxes('listboxryan1gm9',8);
+        listboxes('listboxalmos2gm9',8);
+        listboxes('listboxandor2gm9',8);
+        listboxes('listboxbill2gm9',8);
+        listboxes('listboxcarl2gm9',8);
+        listboxes('listboxgrant2gm9',8);
+        listboxes('listboxmark2gm9',8);
+        listboxes('listboxrandy2gm9',8);
+        listboxes('listboxryan2gm9',8);
+        
+        document.getElementById("v10").innerText = visitor_array[9];
+        document.getElementById("h10").innerText = home_array[9];
+        document.getElementById("f10").innerText = favourite_array[9];
+        document.getElementById("p10").innerText = pointspread_array[9];
+        let ps10 = parseFloat(pointspread_array[9]);
+        upset_classes(ps10);
+        document.getElementById("ut10").innerText = upset_class;
+        upset_type_array.push(upset_class);
+        listboxes('listboxalmos1gm10',9);
+        listboxes('listboxandor1gm10',9);
+        listboxes('listboxbill1gm10',9);
+        listboxes('listboxcarl1gm10',9);
+        listboxes('listboxgrant1gm10',9);
+        listboxes('listboxmark1gm10',9);
+        listboxes('listboxrandy1gm10',9);
+        listboxes('listboxryan1gm10',9);
+        listboxes('listboxalmos2gm10',9);
+        listboxes('listboxandor2gm10',9);
+        listboxes('listboxbill2gm10',9);
+        listboxes('listboxcarl2gm10',9);
+        listboxes('listboxgrant2gm10',9);
+        listboxes('listboxmark2gm10',9);
+        listboxes('listboxrandy2gm10',9);
+        listboxes('listboxryan2gm10',9);
+        
+        if (no_games >= 11) {
+            document.getElementById("v11").innerText = visitor_array[10];
+            document.getElementById("h11").innerText = home_array[10];
+            document.getElementById("f11").innerText = favourite_array[10];
+            document.getElementById("p11").innerText = pointspread_array[10];
+            let ps11 = parseFloat(pointspread_array[10]);
+            upset_classes(ps11);
+            document.getElementById("ut11").innerText = upset_class;
+            upset_type_array.push(upset_class);
+            listboxes('listboxalmos1gm11',10);
+            listboxes('listboxandor1gm11',10);
+            listboxes('listboxbill1gm11',10);
+            listboxes('listboxcarl1gm11',10);
+            listboxes('listboxgrant1gm11',10);
+            listboxes('listboxmark1gm11',10);
+            listboxes('listboxrandy1gm11',10);
+            listboxes('listboxryan1gm11',10);
+            listboxes('listboxalmos2gm11',10);
+            listboxes('listboxandor2gm11',10);
+            listboxes('listboxbill2gm11',10);
+            listboxes('listboxcarl2gm11',10);
+            listboxes('listboxgrant2gm11',10);
+            listboxes('listboxmark2gm11',10);
+            listboxes('listboxrandy2gm11',10);
+            listboxes('listboxryan2gm11',10);
+        }
+        if (no_games >= 12) {
+            document.getElementById("v12").innerText = visitor_array[11];
+            document.getElementById("h12").innerText = home_array[11];
+            document.getElementById("f12").innerText = favourite_array[11];
+            document.getElementById("p12").innerText = pointspread_array[11];
+            let ps12 = parseFloat(pointspread_array[11]);
+            upset_classes(ps12);
+            document.getElementById("ut12").innerText = upset_class;
+            upset_type_array.push(upset_class);
+            listboxes('listboxalmos1gm12',11);
+            listboxes('listboxandor1gm12',11);
+            listboxes('listboxbill1gm12',11);
+            listboxes('listboxcarl1gm12',11);
+            listboxes('listboxgrant1gm12',11);
+            listboxes('listboxmark1gm12',11);
+            listboxes('listboxrandy1gm12',11);
+            listboxes('listboxryan1gm12',11);
+            listboxes('listboxalmos2gm12',11);
+            listboxes('listboxandor2gm12',11);
+            listboxes('listboxbill2gm12',11);
+            listboxes('listboxcarl2gm12',11);
+            listboxes('listboxgrant2gm12',11);
+            listboxes('listboxmark2gm12',11);
+            listboxes('listboxrandy2gm12',11);
+            listboxes('listboxryan2gm12',11);
+        }
+        if (no_games >= 13) {
+            document.getElementById("v13").innerText = visitor_array[12];
+            document.getElementById("h13").innerText = home_array[12];
+            document.getElementById("f13").innerText = favourite_array[12];
+            document.getElementById("p13").innerText = pointspread_array[12];
+            let ps13 = parseFloat(pointspread_array[12]);
+            upset_classes(ps13);
+            document.getElementById("ut13").innerText = upset_class;
+            upset_type_array.push(upset_class);
+            listboxes('listboxalmos1gm13',12);
+            listboxes('listboxandor1gm13',12);
+            listboxes('listboxbill1gm13',12);
+            listboxes('listboxcarl1gm13',12);
+            listboxes('listboxgrant1gm13',12);
+            listboxes('listboxmark1gm13',12);
+            listboxes('listboxrandy1gm13',12);
+            listboxes('listboxryan1gm13',12);
+            listboxes('listboxalmos2gm13',12);
+            listboxes('listboxandor2gm13',12);
+            listboxes('listboxbill2gm13',12);
+            listboxes('listboxcarl2gm13',12);
+            listboxes('listboxgrant2gm13',12);
+            listboxes('listboxmark2gm13',12);
+            listboxes('listboxrandy2gm13',12);
+            listboxes('listboxryan2gm13',12);
+        }
+        if (no_games >= 14) {
+            document.getElementById("v14").innerText = visitor_array[13];
+            document.getElementById("h14").innerText = home_array[13];
+            document.getElementById("f14").innerText = favourite_array[13];
+            document.getElementById("p14").innerText = pointspread_array[13];
+            let ps14 = parseFloat(pointspread_array[13]);
+            upset_classes(ps14);
+            document.getElementById("ut14").innerText = upset_class;
+            upset_type_array.push(upset_class);
+            listboxes('listboxalmos1gm14',13);
+            listboxes('listboxandor1gm14',13);
+            listboxes('listboxbill1gm14',13);
+            listboxes('listboxcarl1gm14',13);
+            listboxes('listboxgrant1gm14',13);
+            listboxes('listboxmark1gm14',13);
+            listboxes('listboxrandy1gm14',13);
+            listboxes('listboxryan1gm14',13);
+            listboxes('listboxalmos2gm14',13);
+            listboxes('listboxandor2gm14',13);
+            listboxes('listboxbill2gm14',13);
+            listboxes('listboxcarl2gm14',13);
+            listboxes('listboxgrant2gm14',13);
+            listboxes('listboxmark2gm14',13);
+            listboxes('listboxrandy2gm14',13);
+            listboxes('listboxryan2gm14',13);
+        }
+        if (no_games >= 15) {
+            document.getElementById("v15").innerText = visitor_array[14];
+            document.getElementById("h15").innerText = home_array[14];
+            document.getElementById("f15").innerText = favourite_array[14];
+            document.getElementById("p15").innerText = pointspread_array[14];
+            let ps15 = parseFloat(pointspread_array[14]);
+            upset_classes(ps15);
+            document.getElementById("ut15").innerText = upset_class;
+            upset_type_array.push(upset_class);
+            listboxes('listboxalmos1gm15',14);
+            listboxes('listboxandor1gm15',14);
+            listboxes('listboxbill1gm15',14);
+            listboxes('listboxcarl1gm15',14);
+            listboxes('listboxgrant1gm15',14);
+            listboxes('listboxmark1gm15',14);
+            listboxes('listboxrandy1gm15',14);
+            listboxes('listboxryan1gm15',14);
+            listboxes('listboxalmos2gm15',14);
+            listboxes('listboxandor2gm15',14);
+            listboxes('listboxbill2gm15',14);
+            listboxes('listboxcarl2gm15',14);
+            listboxes('listboxgrant2gm15',14);
+            listboxes('listboxmark2gm15',14);
+            listboxes('listboxrandy2gm15',14);
+            listboxes('listboxryan2gm15',14);
+        }
+        if (no_games >= 16) {
+            document.getElementById("v16").innerText = visitor_array[15];
+            document.getElementById("h16").innerText = home_array[15];
+            document.getElementById("f16").innerText = favourite_array[15];
+            document.getElementById("p16").innerText = pointspread_array[15];
+            let ps16 = parseFloat(pointspread_array[15]);
+            upset_classes(ps16);
+            document.getElementById("ut16").innerText = upset_class;
+            upset_type_array.push(upset_class);
+            listboxes('listboxalmos1gm16',15);
+            listboxes('listboxandor1gm16',15);
+            listboxes('listboxbill1gm16',15);
+            listboxes('listboxcarl1gm16',15);
+            listboxes('listboxgrant1gm16',15);
+            listboxes('listboxmark1gm16',15);
+            listboxes('listboxrandy1gm16',15);
+            listboxes('listboxryan1gm16',15);
+            listboxes('listboxalmos2gm16',15);
+            listboxes('listboxandor2gm16',15);
+            listboxes('listboxbill2gm16',15);
+            listboxes('listboxcarl2gm16',15);
+            listboxes('listboxgrant2gm16',15);
+            listboxes('listboxmark2gm16',15);
+            listboxes('listboxrandy2gm16',15);
+            listboxes('listboxryan2gm16',15);
+        }
+        console.log(upset_type_array);
+        console.log(weekTitle_olgNumberTitle);
+        console.log(file_path + weekly_file);
+ //       console.log(output);
+ //       console.log(users_array);
+        
+    </script>
+    </form>  
+</body>
+</html>
