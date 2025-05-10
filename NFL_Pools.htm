@@ -1654,6 +1654,7 @@
                 jsPDF: { unit: 'in', format: 'legal', orientation: 'landscape' }
             }
             html2pdf().from(document.body).set(options).toPdf().save();
+            copy_to_git_repoistory();
 //            window.print(); save() output(path_file, 'f')  letterRendering: true,
             
         }
@@ -1703,6 +1704,25 @@
                 console.error('An error occurred while saving the file:', error);
 // Add user-friendly error handling here (e.g., display an alert to the user).
 }    
+        }
+        function copy_to_git_repoistory() {
+            const simpleGit = require('simple-git');
+            const fs = require('fs');
+            const path = require('path');
+
+            const localRepoPath = 'https://github.com/Almos-webspace/Almos-webspace.github.io/tree/2025';
+            const filePath = path.join(localRepoPath, weekly_file);
+//            const fileContent = 'Hello, World!';
+
+//            fs.writeFileSync(filePath, fileContent);
+
+            const git = simpleGit(localRepoPath);
+
+            git.add(filePath)
+                .commit('Add new file')
+                .push('origin', 'main')
+                .then(() => console.log('File pushed to GitHub'))
+                .catch(error => console.error('Error:', error));
         }
         var week = 1;
         var poolsNumber = 25;
