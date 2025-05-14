@@ -1577,6 +1577,21 @@
             <td></td>
             <td></td>
             <td id="nsmall1"></td>
+            <td id="nsmall2"></td>
+            <td id="nsmall3"></td>
+            <td id="nsmall4"></td>
+            <td id="nsmall5"></td>
+            <td id="nsmall6"></td>
+            <td id="nsmall7"></td>
+            <td id="nsmall8"></td>
+            <td id="nsmall9"></td>
+            <td id="nsmall10"></td>
+            <td id="nsmall11"></td>
+            <td id="nsmall12"></td>
+            <td id="nsmall13"></td>
+            <td id="nsmall14"></td>
+            <td id="nsmall15"></td>
+            <td id="nsmall16"></td>
         </tr>
         <tr>
             <td>No# Med</td>
@@ -1585,7 +1600,23 @@
             <td></td>
             <td></td>
             <td></td>
-            <td><td id="nmed1"></td></td>
+            <td></td>
+            <td id="nmed1"></td></td>
+            <td id="nmed2"></td></td>
+            <td id="nmed3"></td></td>
+            <td id="nmed4"></td></td>
+            <td id="nmed5"></td></td>
+            <td id="nmed6"></td></td>
+            <td id="nmed7"></td></td>
+            <td id="nmed8"></td></td>
+            <td id="nmed9"></td></td>
+            <td id="nmed10"></td></td>
+            <td id="nmed11"></td></td>
+            <td id="nmed12"></td></td>
+            <td id="nmed13"></td></td>
+            <td id="nmed14"></td></td>
+            <td id="nmed15"></td></td>
+            <td id="nmed16"></td></td>
         </tr>
         <tr>
             <td>No# Lrg</td>
@@ -1594,7 +1625,23 @@
             <td></td>
             <td></td>
             <td></td>
-            <td><td id="nlrg1"></td></td>
+            <td></td>
+            <td id="nlrg1"></td></td>
+            <td id="nlrg2"></td></td>
+            <td id="nlrg3"></td></td>
+            <td id="nlrg4"></td></td>
+            <td id="nlrg5"></td></td>
+            <td id="nlrg6"></td></td>
+            <td id="nlrg7"></td></td>
+            <td id="nlrg8"></td></td>
+            <td id="nlrg9"></td></td>
+            <td id="nlrg10"></td></td>
+            <td id="nlrg11"></td></td>
+            <td id="nlrg12"></td></td>
+            <td id="nlrg13"></td></td>
+            <td id="nlrg14"></td></td>
+            <td id="nlrg15"></td></td>
+            <td id="nlrg16"></td></td>
         </tr>
     </table>
     <script 
@@ -1648,7 +1695,7 @@
             selectElement = document.querySelector(boxid);
             output = selectElement.options[selectElement.selectedIndex].value;
             users_array[user][week][game] = output;
-            if (output != favourite_array[game-1]) {
+            if ((output != favourite_array[game-1]) && (output !== '')) {
                 if (upset_type_array[game-1] == "Small") {
                     upset_array_no = 1;
                     upset_id = "nsmall" + String(user);
@@ -1666,7 +1713,7 @@
                 console.log(upset_tot);
             } 
             else {
-                if ((previous_game_selection != favourite_array[game-1]) && (previous_game_selection !== undefined)) {
+                if ((previous_game_selection != favourite_array[game-1]) && (previous_game_selection !== undefined) && (previous_game_selection !== '')) {
                   if (upset_type_array[game-1] == "Small") {
                     upset_array_no = 1;
                     upset_id = "nsmall" + String(user);
@@ -1723,7 +1770,7 @@
                 jsPDF: { unit: 'in', format: 'legal', orientation: 'landscape' }
             }
             html2pdf().from(document.body).set(options).toPdf().save();
-            copy_to_git_repoistory();
+//            copy_to_git_repoistory();
 //            window.print(); save() output(path_file, 'f')  letterRendering: true,
             
         }
