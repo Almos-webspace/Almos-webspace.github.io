@@ -22,9 +22,15 @@
         th, td {
             padding: 6px;
         body {
-            width : 355mm;
-            height : 215mm;
+            width : 431mm;
+            height : 279mm;
         {
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
     </style>
     
 <title>NFL Pools</title>
@@ -33,7 +39,7 @@
 </head>
 
 <body>
-    <form method="post">
+    <div id="pool_summary" class="container">
     <h1>NFL Pools</h1> 
     <h2 id="weekTitle_olgNumberTitle"></h2>
     
@@ -1644,6 +1650,7 @@
             <td id="nlrg16"></td></td>
         </tr>
     </table>
+    </div>
     <script 
         src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
         integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
@@ -1756,20 +1763,32 @@
                 var listboxName = "";
                 listboxName = listbox + "gm" + i.toString();
 //                console.log(listboxName);
-                document.getElementById(listboxName).disabled = true;
-                document.getElementById(listboxName).backgroundColor = 'white';
-                document.getElementById(listboxName).color = 'black';
+//                document.getElementById(listboxName).backgroundColor = 'white';
+//                document.getElementById(listboxName).color = 'black';
+//                document.getElementById(listboxName).disabled = true;
+                var curr_listbox = document.getElementById(listboxName);
+                var selectedOption = curr_listbox.options[curr_listbox.selectedIndex].text;
+                console.log(selectedOption);
+                
+                // Create a new span element to display the selected item
+                var listbox_sel_text = listboxName + "selected_option"; 
+                var text_box = document.createElement(listbox_sel_text);
+                text_box.textContent = selectedOption;
+
+                // Replace the listbox with the span
+                curr_listbox.parentNode.replaceChild(text_box, curr_listbox);
             }
 
         }
         function createPdf() {
+            const element = document.getElementById('pool_summary');
             const options = {
-                margin:[0,0],
-                html2canvas:  { scale: 3, height: 950, width: 1700 },
+                margin:[-1.75,0,0,0],
+                html2canvas:  { scale: 3, height: 1200, width: 1700 },
                 filename: weekly_file,
                 jsPDF: { unit: 'in', format: 'legal', orientation: 'landscape' }
             }
-            html2pdf().from(document.body).set(options).toPdf().save();
+            html2pdf().from(pool_summary).set(options).toPdf().save();
 //            copy_to_git_repoistory();
 //            window.print(); save() output(path_file, 'f')  letterRendering: true,
             
@@ -2290,6 +2309,5 @@
 //       console.log(users_array);
 
     </script>
-    </form>  
 </body>
 </html>
