@@ -1755,10 +1755,10 @@
         function lineComplete(buttonid,listbox) {
             document.getElementById(buttonid).disabled = true;
 //            saveAsPDF();
-            createPdf();
+//            createPdf();
 //            sendemail();
-//            output_file = 'nfl_pools_users_array';
-//            write_array(users_array,output_file);
+            output_file = 'nfl_pools_users_array.txt';
+            write_array(users_array,output_file);
             for (let i = 1; i <= no_games; i++) {
                 var listboxName = "";
                 listboxName = listbox + "gm" + i.toString();
@@ -1783,7 +1783,7 @@
         function createPdf() {
             const element = document.getElementById('pool_summary');
             const options = {
-                margin:[-1.75,0,0,0],
+                margin:[0,0,0,0],
                 html2canvas:  { scale: 3, height: 1200, width: 1700 },
                 filename: weekly_file,
                 jsPDF: { unit: 'in', format: 'legal', orientation: 'landscape' }
@@ -1835,9 +1835,13 @@
             try {
                 const data = new Blob([JSON.stringify(array)], { type: 'application/json' });
                 saveAs(data, output_file);
+                saveAs("https://github.com/Almos-webspace/Almos-webspace.github.io.git", output_file);
+//                saveAs("https://github.com/Almos-webspace/Almos-webspace.github.io.git", output_file);
             }   catch (error) {
                 console.error('An error occurred while saving the file:', error);
 // Add user-friendly error handling here (e.g., display an alert to the user).
+// "https://github.com/Almos-webspace/Almos-webspace.github.io.git"
+// https://api.github.com/...
 }    
         }
         function copy_to_git_repoistory() {
@@ -1869,7 +1873,7 @@
         var olgNumberTitle = "OLG Pools No - " + poolsNumber;
         var weekTitle_olgNumberTitle = weekTitle + "          " + olgNumberTitle;
         var weekly_file = "NFL_Pools_week_" + week.toString() + ".pdf";
-        var file_path = 'C:/Users/amei/Downloads/';
+        var file_path = 'C:/Users/amei/Documents/html';
         var path_file = file_path + weekly_file;
         var upset_type_array = [];
         var no_games = visitor_array.length;
