@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -1660,9 +1660,15 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdeliver.net/npm/octokit@3.1.2/dist/octokit.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/github-api@3.4.0/dist/GitHub.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/github-api@3.4.0/dist/GitHub.min.js"></script>
+    <script src="https://unpkg.com/github-api/dist/GitHub.min.js"></script>
+    <script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
+    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
     <script>
-        
         function upset_classes(ps){
             if(ps >= -3.0) {
                 upset_class = "Small"
@@ -1702,6 +1708,7 @@
             selectElement = document.querySelector(boxid);
             output = selectElement.options[selectElement.selectedIndex].value;
             users_array[user][week][game] = output;
+//            localStorage.setItem("users_array", JSON.stringify(users_array));
             if ((output != favourite_array[game-1]) && (output !== '')) {
                 if (upset_type_array[game-1] == "Small") {
                     upset_array_no = 1;
@@ -1714,10 +1721,11 @@
                     upset_id = "nlrg" + String(user);
                 }
                 users_summary[user][week][upset_array_no] = users_summary[user][week][upset_array_no] + 1;
+//                localStorage.setItem("users_summary", JSON.stringify(users_summary));
                 upset_tot = String(users_summary[user][week][upset_array_no]);
                 document.getElementById(upset_id).innerText = upset_tot;
-                console.log(upset_id);
-                console.log(upset_tot);
+//                console.log(upset_id);
+//                console.log(upset_tot);
             } 
             else {
                 if ((previous_game_selection != favourite_array[game-1]) && (previous_game_selection !== undefined) && (previous_game_selection !== '')) {
@@ -1732,10 +1740,11 @@
                     upset_id = "nlrg" + String(user);
                 }
                 users_summary[user][week][upset_array_no] = users_summary[user][week][upset_array_no] - 1;
+//                localStorage.setItem("users_summary", JSON.stringify(users_summary));
                 upset_tot = String(users_summary[user][week][upset_array_no]);
                 document.getElementById(upset_id).innerText = upset_tot;
-                console.log(upset_id);
-                console.log(upset_tot);
+//                console.log(upset_id);
+//                console.log(upset_tot);
                 }
             }
             document.getElementById(save_button).disabled = true;
@@ -1743,10 +1752,10 @@
                    document.getElementById(save_button).disabled = false;
             }
             console.log(output);
-            console.log(favourite_array[game-1]);
-            console.log(previous_game_selection);
-            console.log(users_summary );
-            console.log(users_array);
+//            console.log(favourite_array[game-1]);
+//            console.log(previous_game_selection);
+//            console.log(users_summary );
+//            console.log(users_array);
         return output;
         return users_array;
         return users_summary;
@@ -1755,10 +1764,9 @@
         function lineComplete(buttonid,listbox) {
             document.getElementById(buttonid).disabled = true;
 //            saveAsPDF();
-//            createPdf();
+            createPdf();
 //            sendemail();
-            output_file = 'nfl_pools_users_array.txt';
-            write_array(users_array,output_file);
+//            saveFileToDropBox();
             for (let i = 1; i <= no_games; i++) {
                 var listboxName = "";
                 listboxName = listbox + "gm" + i.toString();
@@ -1768,7 +1776,7 @@
 //                document.getElementById(listboxName).disabled = true;
                 var curr_listbox = document.getElementById(listboxName);
                 var selectedOption = curr_listbox.options[curr_listbox.selectedIndex].text;
-                console.log(selectedOption);
+//                console.log(selectedOption);
                 
                 // Create a new span element to display the selected item
                 var listbox_sel_text = listboxName + "selected_option"; 
@@ -1835,7 +1843,6 @@
             try {
                 const data = new Blob([JSON.stringify(array)], { type: 'application/json' });
                 saveAs(data, output_file);
-                saveAs("https://github.com/Almos-webspace/Almos-webspace.github.io.git", output_file);
 //                saveAs("https://github.com/Almos-webspace/Almos-webspace.github.io.git", output_file);
             }   catch (error) {
                 console.error('An error occurred while saving the file:', error);
@@ -1844,31 +1851,92 @@
 // https://api.github.com/...
 }    
         }
-        function copy_to_git_repoistory() {
-            const simpleGit = require('simple-git');
-            const fs = require('fs');
-            const path = require('path');
-
-            const localRepoPath = 'https://github.com/Almos-webspace/Almos-webspace.github.io/tree/2025/';
-            const filePath = path.join(localRepoPath, weekly_file);
-//            const fileContent = 'Hello, World!';
-
-//            fs.writeFileSync(filePath, fileContent);
-
-            const git = simpleGit(localRepoPath);
-
-            git.add(filePath)
-                .commit('Add new file')
-                .push('origin', 'main')
-                .then(() => console.log('File pushed to GitHub'))
-                .catch(error => console.error('Error:', error));
+        async function saveFileToDropBox() {
+//                const Dropbox = window.Dropbox;
+//                var dbx = new Dropbox.Dropbox({ clientId: 's5wpgbdw6kw3jw5' });
+                const dbx = new Dropbox.Dropbox({ accessToken: Access_Token });
+//  , clientId: 's5wpgbdw6kw3jw5' 
+//  , secretkey: 'ur4xxiqxl13c1gb'                 
+                var users_text_array = JSON.stringify(users_array);
+                var users_sum_text_array = JSON.stringify(users_summary)
+                var users_file = new File([users_text_array], "users_array.json", { type: "application/json" });
+                var users_sum_file = new File([users_sum_text_array], "users_sum_array.json", { type: "application/json" });
+                try {
+                    const response = await dbx.filesUpload({
+                        path: dropbox_users_path_file, // Desired path and filename in Dropbox
+                        contents : users_file,
+                        mode: { '.tag': 'overwrite' } // Optional: Overwrite if file exists
+                });
+                console.log('File uploaded successfully:', response);
+                } catch (error) {
+                    console.error('Error uploading file:', error.error);
+                }
+                try {
+                    const response = await dbx.filesUpload({
+                        path: dropbox_users_sum_path_file, // Desired path and filename in Dropbox
+                        contents : users_sum_file,
+                        mode: { '.tag': 'overwrite' } // Optional: Overwrite if file exists
+                });
+                console.log('File uploaded successfully:', response);
+                } catch (error) {
+                    console.error('Error uploading file:', error.error);
+                }
         }
+        async function LoadFileFomDropBox() {
+            const dbx = new Dropbox.Dropbox({ accessToken: Access_Token });
+            try {
+                const response = await dbx.filesDownload({
+                    path: dropbox_users_path_file, // Desired path and filename in Dropbox
+                });
+                var ab = await response.result.fileBlob.text();
+                users_array = JSON.parse(ab);
+                console.log('Users Array : ', users_array);
+                console.log('Users Almos1 Pick 1 : ', users_array[2][1][1]);
+                console.log('File uploaded successfully:', response);
+            return users_array;
+            }
+            catch (error) {
+                    console.error('Error downloading file:', error.error);
+            }
+//        return users_array;
+        }
+        async function Get_Array() {
+            var users_array = await LoadFileFomDropBox();
+            console.log(users_array);
+        }
+        async function getAccessToken(refreshToken, clientId, clientSecret) {
+            const url = 'https://api.dropboxapi.com/oauth2/token';
+            const params = new URLSearchParams({
+                grant_type: 'refresh_token',
+                refresh_token: refreshToken,
+                client_id: clientId,
+                client_secret: clientSecret,
+            });
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: params.toString(),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error: ${response.statusText}`);
+            }
+
+            const data = await response.json();
+            Access_Token = data.access_token;
+            return Access_Token;
+        }
+//        getAccessToken('sl.u.AF5DWF_CxiQMZ4l0FCCR91J6MC9I42ShqM1uO0mb96Zzqo6t_eEewW2_gbxrOhHgcK1iMNKxTe90Jni812K8tDsxIEFIWEe_KdEpFJaiUdLus9MkMNchEJUKzLImCHjXEtehA3Td9frN0-JktMVTOVIOQmuI-Twlo47UOw0fMiS0UW_U9w5UvmjZYd4ns0VI-0uB_fjbT99FPw9ufUFAXC99R-IqYW0Ky6_KST2OwdLbWEDiL55EhVG94EwbDBCKAFYRlAPiZWyu_fw8eyAB1P9oXMiDbdlSMOzmiYLbqSzlEVRgSKpr96LVV27NciiVSnh4QgStHKJojFPfxZdSDVJp0RCuSTfdndzj_fIf2B7HRTVEJ4IT7MEYBGHSDkng7w8VxjwTCVn5j0UYky2-jZ5fdxv3h13SbBIAT9TBRMQvAE230T41otWGYvSvnZBEx-IhjpCbj2rny66Oc-uendiygFVMkOTLjc0P39MR2F4cBvagMiuNwKh1pdh3HYu4VtbinwoSKdjPXlZ6oiALIA6mumMG0P7WULYWp_Q6w0xhjKQMpcA_C_jCwnTLWPDEHgFGCx6unn0ZLllkMFm1LWKjxk6f7B653QGDcrDO9_fFpaQfozeKuJMi3qaq7fyMHcFjegaubFz8haop5t60SUBgsWqPuKUYRGiyIIrgjVK-D_HoQ5-TUlgYefU_n1SWkqmW9zFZigHeWuNAJ2c_RluTJkm2enkBaibS-b60eqsba28TLt5r3lrT2bApdvXd0OJWIhlm-7scCR-PqqQ3TypqmmTL6oQDiFpuJLUdDDTigpRLyGjUNVgAABKXv6P___S-FDO7MbvOFbuk-bSdRI_X0jLt374qngWdKg3yWnTc85eHZte9pEhsjYpmYp-fyKy9p77na-vvDuKBbv0Afg0ibxNa9oIMJb8EHAcEwYmKJdmfA6LL4tSVS1Z0xtzDRK1LkgVRCPDusgwl4myKvpYeyYuvKs0NlxtgbuQmmOlM-mAt-1ZyTpvA4NlBuklvdSNk3E5_rT_HjJd0iXBFKT8FvQKIvKH2WH3eEkL2WIf61fcMf2nVKo0t0fwm2byN7xW-rL2g938XsZ2YhrK-W6lX1oUm9KKWfB2GB2GOJOjOowKhc9NTP8vxqG4B-bfzfKYs8zZXdUkzm1R2Djw7j0E9ZByMDVEYyl75h9JREVO6clGTmPwlhA-DyzjbTwQbYxBNZjv9Nh-Cr_qcZgYpXtWBPgJ0WP5SFVpT8bJ5CnGuLEu6psb97InKmpTlSAYOru8', 's5wpgbdw6kw3jw5', 'ur4xxiqxl13c1gb')
+        Access_Token = 'sl.u.AF_Kg5aJlOi9CzJb-x1boPzsiuwo4ex5udDuKyOC7T6GlYoN8EYTfqdhxcnusf0OSffNJGDrmH9YfaQnb-WDDZZ0JCxVjaQLI0Ls1jSZ2wZYnUrUXSSbnLv6x4IEdcRNJ6NwtKQ4VsZKm-3Ro_yeaQEyPC0JY4jVXRtabY6bHtMhB3s0UNIFs0onVoeUsZV-ul_sRxGMYoeBpxjOhs5qriTEzCO099p9vBb76zA6s0IapoEfng-tbZCYL-8Z9KHAkiebpsd7KVprHSXEU6kqdRuIVK7RGeqS5Ub4KNo7vyUkUM1ayYYf0viNbTR4gn4foM91y4K-a4mhx6Y_DLWmplZKyJU0Wl4QmuQ9akRJEznHto0MSL7ZYiYybinIjAElDP9SEbv-QKwnDI7kJpCl9bXgJPdleJ-VDr7QIYlJyRiXJFAB_xWIqp3jymmLtFUxV9qXGpM1EGqLeRWItUCVTOBLVU9TtlhmiJ1LrV1TIk_bSKFDO63ufK-3C1ypoYrLnZKLPXHjwSP_l9R6YIRPRQIHnGwWL27A4cOxro6M_OiUMzFH5hvzyzS0JMO1Xm9lyvU9QDvtnAluOTO_69T1ELZFY-nm1iF5Lr62lCGt89fD-Too_T_eYeVF2SPUvL11mNFcnu7KPEDKFSLWrApq0Zl0M4L7IcE4kG0pAexf1wHzx2bHrjzrlpisJdydQSZaEPzcXY06x_FqSMw6IHGJlggkBNi2wy0lCoJ4jY8xtGIPyqOog9r5K1_jkomOFyauI4nH1kY1I-uKr0ns3-mVcyy2ZvIiqGTh25RNgx720416WH95m3F8ueRbibi5rPqJZMZotW1H8N4NhPaaxWkEccipIOURa8a3AmV1Ghl0iGPZa15J46mLCWWb_cJ27kFH6isg2dTmvRY5IWCgFG3DTVExvcNWdpuhOWeS88Ns_9y79VOr2RE2nHTOUJpNtmRXvRCCg8lIclDy3t4qLQWGuLUI6Z1LMJeQI3MfMPCI3aXQWQ0ByxHaOoQwpSKFC2kKDTWCUy7muPqE7akDBjfVXDRCIU1Ia_CIGzWylM7u_SR0WJIo5n42cMnjhH7UDchXHwRDG6PbZlyZxzEfIGs8xv1upUWR-TfoCU7sDNokd9Mx3BX3RwIIP9vVWs64sPxuSYNu7Zg96-irf6A_HhWbrhUI21MPW51GcMBtMmLfTngW-61h3XkuldQ-uCfjY70dgUI09jFe5630Z2uRvpgPKNVVynkLVr9d7-XUMgWZjcx0Bov7Ms1jnVQhDGIRv9uVw9A';
+        var dropbox_users_path_file = '/2025/users_array.json';
+        var dropbox_users_sum_path_file = '/2025/users_sum_array.json';
         var week = 1;
-        var poolsNumber = 25;
-        var visitor_array = ["BUF","CAR","CHI","HOU","JAK","NO","NYG","WSH","KC","LAC","MIA","SF","SEA","MIN"];
-        var home_array = ["NE","ATL","GB","TEN","IND","TB","PHI","DAL","DEN","LV","NYJ","ARZ","LAR","DET"];
-        var favourite_array = ["BUF","ATL","GB","TEN","IND","TB","PHI","WSH","DEN","LAC","MIA","ARZ","SEA","DET"];
-        var pointspread_array = ["-2.5","-8.5","-8.5","-1.5","-4.5","-13.5","-3.5","-4.5","-10.5","-3.5","-1.5","-3.5","-3.5","-2.5"];
+        var poolsNumber = 10;
+        var visitor_array = ["ARZ","CAR","CIN","LV","MIA","NYG","PIT","TB","SF","TEN","DET","HOU","BAL","MIN"];
+        var home_array = ["NO","JAK","CLE","NE","IND","WAS","NYJ","ATL","SEA","DEN","GB","LAR","BUF","CHI"];
+        var favourite_array = ["ARZ","JAK","CIN","NE","MIA","WAS","PIT","TB","SF","DEN","GB","LAR","BAL","MIN"];
+        var pointspread_array = ["-6.5","-3.5","-5.5","-2.5","-1.5","-5.5","-2.5","-2.5","-2.5","-7.5","-1.5","-3.5","-1.5","-1.5"];
         var weekTitle = "Week - " + week;
         var olgNumberTitle = "OLG Pools No - " + poolsNumber;
         var weekTitle_olgNumberTitle = weekTitle + "          " + olgNumberTitle;
@@ -1877,6 +1945,12 @@
         var path_file = file_path + weekly_file;
         var upset_type_array = [];
         var no_games = visitor_array.length;
+        const dropboxClientID = 's5wpgbdw6kw3jw5'
+
+//        LoadFileFomDropBox();
+//        var users_array = LoadFileFomDropBox();
+//        console.log('Returned Users Array : ', users_array);
+//        console.log('User1 Week1 Gm1 Pick : ', users_array[1][1][1]);
         var users_array = [[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
                           [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
                           [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
@@ -1886,6 +1960,9 @@
                           [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
                           [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],
                           [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]];
+//
+//        var users_summary = JSON.parse(localStorage.getItem("users_summary"));
+//
         var users_summary = [[[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],[[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],
                           [[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],[[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],
                           [[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],[[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]],
@@ -2306,8 +2383,8 @@
 //        document.getElementById("nsmall1").innerText = users_array[1][week][1];
 //        document.getElementById("nmed1").innerText = users_array[1][week][2];
 //        document.getElementById("nlrg1").innerText = users_array[1][week][3];
-        console.log(upset_type_array);
-        console.log(weekTitle_olgNumberTitle);
+//        console.log(upset_type_array);
+//        console.log(weekTitle_olgNumberTitle);
         console.log(file_path + weekly_file);
 //       console.log(output);
 //       console.log(users_array);
