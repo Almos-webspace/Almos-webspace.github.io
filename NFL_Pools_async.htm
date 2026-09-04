@@ -1787,8 +1787,11 @@
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fit-to-page@1.0.0/fit-to-page.min.js"></script>
     <script src="http://example.com/my-commonjs-lib.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
-    <script import fetch from 'node-fetch'></script>;
+    <script src="https://github.com/requirejs/requirejs/blob/master/require.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script import http from 'http'></script>
+    <script import node-fetch from 'node-fetch'></script>
+    <script import express from 'express'></script>
     <script>
 // Calculate upset class type based on point spread from point spread array
         function upset_classes(ps){
@@ -2608,33 +2611,40 @@
             }
         }
         function app_authorization() {
-            const fetch =  require[('node-fetch')];
-            const app = require('express');
-//            const app = express();
+            // Standalone example to demonstrate codeflow.
+            // Start the server, hit localhost:3000 on the browser, and click through.
+            // On the server logs, you should have the auth code, as well as the token
+            // from exchanging it. This exchange is invisible to the app user
+
+            const fetch = require('node-fetch');
+            const app = require('express')();
+            
             const hostname = 'localhost';
             const port = 3000;
+
             const config = {
                 fetch,
-                clientId: app_key,
-                clientSecret: app_secret,
-            }
-//            const { Dropbox } = require('dropbox'); // eslint-disable-line import/no-unresolved
-            const dbx = new Dropbox.Dropbox(config);
+                clientId: [clientId],
+            };
+
+            const { Dropbox } = require('dropbox'); // eslint-disable-line import/no-unresolved
+
+            const dbx = new Dropbox(config);
+
             const redirectUri = `http://${hostname}:${port}/auth`;
-            console.log("fetch = ", fetch);
-            console.log("app = ", app);
-            console.log("config = ", config.clientId);
-            console.log("config = ", config.clientSecret);
+
             app.get('/', (req, res) => {
-                dbx.auth.getAuthenticationUrl(redirectUri, null, 'code', 'offline', null, 'none', false)
+                dbx.auth.getAuthenticationUrl(redirectUri, null, 'code', 'offline', null, 'none', true)
                     .then((authUrl) => {
                         res.writeHead(302, { Location: authUrl });
                         res.end();
                     });
             });
+
             app.get('/auth', (req, res) => { // eslint-disable-line no-unused-vars
                 const { code } = req.query;
                 console.log(`code:${code}`);
+
                 dbx.auth.getAccessTokenFromCode(redirectUri, code)
                     .then((token) => {
                         console.log(`Token Result:${JSON.stringify(token)}`);
@@ -2648,56 +2658,43 @@
                             });
                     })
                     .catch((error) => {
-                        console.error(error);
+                        console.log(error);
                     });
-                res.end();
-            });
-            app.listen(port);
-            return (token)
+                });
+
+        app.listen(port);
         }
-        function app_authorization2() {
+        async function app_authorization2() {
             const CLIENT_ID = app_key;
             const REDIRECT_URI = redirect_uri;
-// Generate PKCE values for security
-            function generateCodeVerifier() {
-                const array = new Uint32Array(56);
-                window.crypto.getRandomValues(array);
-                return Array.from(array, dec => ('0' + dec.toString(16)).substr(-2)).join('');
-            }
-            async function gererateCodeChallenge(verifier) {
-                const encoder = new TextEncoder();
-                const data = encoder.encode(verifier);
-                const digest = await window.crypto.subtle.digest('SHA-256', data);
-                return btoa(String.fromCharCode.apply(null, new Uint8Array(digest)))
-                    .replace(/\+/g, '-').replace(/\//g, '-').replace(/=+$/, '');
-            }
 // Redirect the user to Dropbox
-            async function initiateDropboxLogin() {
-                const verifier = generateCodeVerifier();
-                localStorage.setItem('dropbox_verifier', verifier);
-                const challenge = await gererateCodeChallenge(verifier);
-                const dbx = new Dropbox.Dropbox({ clientId: CLIENT_ID });
-                const authUrl = await dbx.auth.getAuthenticationUrl (
-                    REDIRECT_URI,   // redirectUri
-                    null,           // state    
-                    'code',         // authType
-                    'offline',      // tokenAccessType
-                    ['files.content.write', 'files.content.read'],  // scope
-                    'none',         // includeGrantedScopes
-                    challenge,
-                    true            // usePKCE
+            const dbx = new Dropbox.Dropbox({ clientId: CLIENT_ID });
+            const authUrl = await dbx.auth.getAuthenticationUrl (
+                REDIRECT_URI,   // redirectUri
+                null,           // state    
+                'code',         // authType
+                'offline',      // tokenAccessType
+                null,  // scope
+                'none',         // includeGrantedScopes
+                true            // usePKCE
                 );
-                window.location.href = authUrl;
-                console.log("Authorization URL Properties - ", authUrl);  
-            }
-            initiateDropboxLogin();
-            Access_Token = authUrl.code;
+            console.log("Authorization URL Properties - ", authUrl);
+            window.location.href = authUrl;
+            const code = new URLSearchParams(window.location.search).get('code');
+            dbx.auth.getAccessTokenFromCode('https://your-redirect-uri.com', code)
+                .then(token => {
+                    console.log('Access token:', token.result.access_token);
+                    // Continue to your app's logged-in state
+            })
+            .catch(err => console.error(err));
+            Access_Token = token.result.access_token;
             return Access_Token;
         }
-//        Access_Token = '24j2NmohKcAAAAAAAAABOmW9oYOsil10KtAT8puq8DY';
+
         const app_key = 's5wpgbdw6kw3jw5';
-        const app_secret = 'ur4xxiqxl13c1gb'
-        const redirect_uri = 'http://localhost:3000/auth';
+        const app_secret = 'ur4xxiqxl13c1gb';
+        const redirect_uri = 'http://localhost:3000/callback';
+//        const redirect_uri = 'http://localhost:3000/auth&oauth_callback=C:/Users/amei/OneDrive/Documents/html/NFL_Pools_async.html';
         var dropbox_users_path_file = '/2025/users_array.json';
         var dropbox_users_sum_path_file = '/2025/users_sum_array.json';
         var week = 9;
