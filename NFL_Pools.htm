@@ -2481,6 +2481,12 @@
                     console.log('Calculated page size:', info.pageSize);
                 // Trigger browser print dialog (user can save as PDF)
                 window.print();
+//   Auto download blank, attempt for use in safari
+//                const { jsPDF } = window.jspdf;
+//                const doc = new jsPDF();
+//                week_str = week.toString();
+//                docstring = "NFL_Pools_week_" + week;
+//                doc.save(docstring);
                 }
             });
         }
@@ -2697,15 +2703,15 @@
 //        const redirect_uri = 'http://localhost:3000/auth&oauth_callback=C:/Users/amei/OneDrive/Documents/html/NFL_Pools_async.html';
         var dropbox_users_path_file = '/2025/users_array.json';
         var dropbox_users_sum_path_file = '/2025/users_sum_array.json';
-        var week = 9;
-        var poolsNumber = 84;
-        var last_early_game_no = 9;
-        var last_late_game_no = 11;
-        var sunday_night_game_no = 12;
-        var visitor_array = ["ATL","CAR","CHI","DEN","IND","LAC","MIN","SF","JAK","NO","KC","SEA","ARZ"];
-        var home_array = ["NE","GB","CIN","HOU","PIT","TEN","DET","NYG","LV","LAR","BUF","WAS","DAL"];
-        var favourite_array = ["NE","GB","CHI","HOU","IND","LAC","DET","SF","JAK","LAR","KC","SEA","DAL"];
-        var pointspread_array = ["-6.5","-13.5","-2.5","-1.5","-3.5","-9.5","-8.5","-2.5","-3.5","-13.5","-1.5","-3.5","-2.5"];
+        var week = 1;
+        var poolsNumber = 18;
+        var last_early_game_no = 8;
+        var last_late_game_no = 12;
+        var sunday_night_game_no = 13;
+        var visitor_array = ["CHI","TB","NO","BUF","BAL","CLE","ATL","NYJ","MIA","ARZ","GB","WAS","DAL","DEN"];
+        var home_array = ["CAR","CIN","DET","HOU","IND","JAK","PIT","TEN","LV","LAC","MIN","PHI","NYG","KC"];
+        var favourite_array = ["CHI","CIN","DET","BUF","BAL","JAK","PIT","TEN","LV","LAC","MIN","PHI","DAL","KC"];
+        var pointspread_array = ["-3.0","-4.0","-7.0","-1.0","-3.5","-8.0","-3.0","-2.0","-3.5","-10.0","-1.0","-5.5","-3.0","-3.0"];
         var weekTitle = "Week - " + week;
         var olgNumberTitle = "OLG Pools No - " + poolsNumber;
         var weekTitle_olgNumberTitle = weekTitle + "          " + olgNumberTitle;
